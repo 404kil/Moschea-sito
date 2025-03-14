@@ -101,21 +101,20 @@
 </head>
 <body>
 
-    <button class="toggle-btn" id="modeToggle" onclick="toggleNightMode()">🌙 Modalità Notte</button>
+  <button class="toggle-btn" id="modeToggle" onclick="toggleNightMode()">🌙 Modalità Notte</button>
 
-    <div class="container">
+  <div class="container">
         <header>
             <h1>Moschea della Città</h1>
             <p>Un luogo di preghiera, comunità e conoscenza.</p>
         </header>
 
-        <div class="info-box" onclick="toggleDetails('chi-siamo')">
+  <div class="info-box" onclick="toggleDetails('chi-siamo')">
             <h3>🏛️ Chi Siamo</h3>
             <div id="chi-siamo" class="details">
                 <p>La Moschea della Città è un luogo di culto e comunità che accoglie tutti i fedeli. Offriamo supporto spirituale e sociale.</p>
             </div>
-        </div>
-        
+        </div>  
         <div class="info-box" onclick="toggleDetails('ramadan')">
             <h3>📄 Orari Ramadan 2025</h3>
             <div id="ramadan" class="details">
@@ -123,7 +122,6 @@
                 <p><a href="Sabato 1 giorno . Ramadan 2025.pdf" target="_blank">📥 Scarica il PDF di Ramadan 2025</a></p>
             </div>
         </div>
-
         <div class="info-box" onclick="toggleDetails('associazione')">
             <h3>🏢 Associazione Culturale</h3>
             <div id="associazione" class="details">
@@ -131,16 +129,14 @@
                 <p><strong>Indirizzo:</strong> Via XX Settembre, 96, 20025 Legnano, MI</p>
                 <p><strong>Email:</strong> <a href="mailto:ASS.CULT.ITALO.ARABA@TISCALI.IT">ASS.CULT.ITALO.ARABA@TISCALI.IT</a></p>
                 <p><strong>Telefono:</strong> +39 389 167 8940</p>
-                <p><strong>Facebook:</strong> <a href="#">Associazione Culturale Italo-Araba di Legnano</a></p>
-            </div>
+                <p><strong>Facebook:</strong> <a href="#">Associazione Culturale Italo-Araba di Legnano</a></p>  
+                </div>
         </div>
     </div>
-
-    <footer>
+  <footer>
         &copy; 2025 Moschea della Città | Tutti i diritti riservati.
     </footer>
-
-    <script>
+  <script>
         function toggleDetails(id) {
             var section = document.getElementById(id);
             var allSections = document.querySelectorAll('.details');
@@ -150,12 +146,10 @@
             section.style.display = (section.style.display === 'block') ? 'none' : 'block';
         }
 
-        function toggleNightMode() {
+  function toggleNightMode() {
             let body = document.body;
             let button = document.getElementById("modeToggle");
-
             body.classList.toggle("night-mode");
-
             if (body.classList.contains("night-mode")) {
                 localStorage.setItem("theme", "dark");
                 button.innerHTML = "☀ Modalità Giorno";
@@ -164,7 +158,6 @@
                 button.innerHTML = "🌙 Modalità Notte";
             }
         }
-
         // Mantiene la modalità selezionata tra una visita e l'altra
         document.addEventListener("DOMContentLoaded", function () {
             if (localStorage.getItem("theme") === "dark") {
@@ -173,6 +166,5 @@
             }
         });
     </script>
-
 </body>
 </html>
